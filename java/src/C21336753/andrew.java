@@ -30,15 +30,20 @@ public class andrew extends Visual {
     
         // analyze the audio and get the magnitude of the desired frequency range (in this example, 100-200Hz)
         fft.forward(getAudioPlayer().mix);
-        int lowerBandIndex = fft.freqToIndex(100);
-        int upperBandIndex = fft.freqToIndex(200);
+        int lowerBandIndex = fft.freqToIndex(60);
+        int upperBandIndex = fft.freqToIndex(100);
         float magnitude = 0;
         for (int i = lowerBandIndex; i <= upperBandIndex; i++) {
             magnitude += fft.getBand(i);
         }
     
         // map the magnitude to a rotation speed (in this example, between 0.01f and 0.1f)
-        rotationSpeed = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 0.01f, 0.1f);
+        rotationSpeed = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 0.01f, 0.01f);
+    
+        // map the magnitude to a color (in this example, from blue to red)
+        colorMode(HSB);
+        float hue = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 200, 0);
+        fill(hue, 255, 255);
     
         // move the cube to the center of the screen
         pushMatrix();
@@ -48,10 +53,11 @@ public class andrew extends Visual {
         rotateX(frameCount * rotationSpeed);
         rotateY(frameCount * rotationSpeed);
     
-        // draw the cube
+        // draw the cube with the mapped color
         box(200);
-    
+        
         popMatrix();
         frameCount++; // increment frame count to rotate the cube
     }
+    
 }
