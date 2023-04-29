@@ -10,7 +10,7 @@ public class david extends PApplet{
   float angle;
 
   public void settings(){
-    size(960, 1080);
+    size(550, 600);
   }
 
   public void setup()
@@ -23,7 +23,7 @@ public class david extends PApplet{
 
     public void draw()
     {
-      background(54,69,79);
+      background(0,0,0);
       translate(width/2, height/2);
       for(int i=0; i<100; i++)
       {
