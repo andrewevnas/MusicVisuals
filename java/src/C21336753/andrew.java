@@ -40,6 +40,14 @@ public class andrew extends Visual {
     
         // map the magnitude to a rotation speed (in this example, between 0.01f and 0.1f)
         rotationSpeed = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 0.01f, 0.01f);
+<<<<<<< HEAD
+=======
+    
+        // map the magnitude to a color (in this example, from blue to red)
+        colorMode(HSB);
+        float hue = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 200, 0);
+        fill(hue, 255, 255);
+>>>>>>> 9800962c7df1b77241693463a4a22dbc5865519b
     
         // move the cube to the center of the screen
         pushMatrix();
@@ -49,10 +57,11 @@ public class andrew extends Visual {
         rotateX(frameCount * rotationSpeed);
         rotateY(frameCount * rotationSpeed);
     
-        // draw the cube
+        // draw the cube with the mapped color
         box(200);
-    
+        
         popMatrix();
         frameCount++; // increment frame count to rotate the cube
     }
+    
 }
