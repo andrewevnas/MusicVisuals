@@ -157,7 +157,9 @@ class Star {
       x = p.random(-p.width, p.width);
       y = p.random(-p.height, p.height);
       pz = z;
+      opacity = 255;
     }
+  }
 
   void show(float speed) {
     p.noStroke();
