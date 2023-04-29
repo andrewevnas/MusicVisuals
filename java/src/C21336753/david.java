@@ -25,11 +25,14 @@ public void setup()
     for(int i=0; i<100; i++)
     {
       fill(i*16, 164-i*50,255-i*10);
-      scale((float) 0.95);
+      scale( 0.95);
     
     rotate(radians(angle));
     rect(0, 0, 600, 600);
     }
     angle+=0.1;
+  }
+
+  private void scale(double d) {
   }
 }
