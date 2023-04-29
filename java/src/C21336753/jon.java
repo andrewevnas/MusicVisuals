@@ -29,7 +29,7 @@ public class jon extends PApplet {
   }
 
   public void setup() {
-    size(900, 900); // set the size of the window to 500x500 pixels
+    size(900, 900); // set the size of the window to 900x900 pixels
 
     minim = new Minim(this);
     audioPlayer = minim.loadFile("song.mp3");
