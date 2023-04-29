@@ -132,7 +132,7 @@ public class jon extends PApplet {
 
 }
 
-class Star extends jon {
+class Star extends PApplet {
   float x;
   float y;
   float z;
@@ -159,9 +159,11 @@ class Star extends jon {
   }
 
   void show(float speed) {
-    if (speed >= 1) {
-      fill(255, opacity);
+    if (g != null) {
       noStroke();
+
+      beginShape();
+      fill(255, opacity);
 
       float sx = map(x / z, 0, 1, 0, width) + width / 2;
       float sy = map(y / z, 0, 1, 0, height) + height / 2;
@@ -179,8 +181,11 @@ class Star extends jon {
       py = y;
 
       opacity = map(speed, 20, 0, 255, 0);
+
+      endShape();
     } else {
       opacity = 0;
     }
   }
+
 }
