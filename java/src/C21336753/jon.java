@@ -137,6 +137,7 @@ import processing.core.PApplet;
 
 
 
+<<<<<<< HEAD
     class Star {
       float x;
       float y;
@@ -191,3 +192,110 @@ import processing.core.PApplet;
     }
   }
 
+=======
+    // draw circle 1
+    ellipse(x1, y1, r1 * 2, r1 * 2);
+
+    // increment the angle of circle 1 to make it rotate clockwise
+    angle1 += rotationSpeed; // for example, rotate at a rate of 0.05 radians per frame
+
+    // calculate the position of circle 2 using trigonometry
+    float x2 = centerX + cos(angle2) * (radius + rotationRadius2);
+    float y2 = centerY + sin(angle2) * (radius + rotationRadius2);
+
+    // set the fill color of circle 2 to orange
+    fill(255, 153, 0, 180);
+
+    // draw circle 2
+    ellipse(x2, y2, r2 * 2, r2 * 2);
+
+    // increment the angle of circle 2 to make it rotate counter-clockwise
+    angle2 -= rotationSpeed; // for example, rotate at a rate of 0.03 radians per frame
+
+    // calculate the position of circle 3 using trigonometry
+    float x3 = centerX + cos(angle3) * (radius + rotationRadius3);
+    float y3 = centerY + sin(angle3) * (radius + rotationRadius3);
+
+    // set the fill color of circle 3 to green
+    fill(255, 0, 0, 180);
+
+    // draw circle 3
+    ellipse(x3, y3, r3 * 2, r3 * 2);
+
+    // increment the angle of circle 3 to make it rotate counter-clockwise
+    angle3 += rotationSpeed; // for example, rotate at a rate of 0.02 radians per frame
+
+    // calculate the position of circle 4 using trigonometry
+    float x4 = centerX + cos(angle4) * (radius + rotationRadius4);
+    float y4 = centerY + sin(angle4) * (radius + rotationRadius4);
+
+    // set the fill color of circle 4 to red
+    fill(51, 153, 102, 180);
+
+    // draw circle 4
+    ellipse(x4, y4, r4 * 2, r4 * 2);
+
+    // increment the angle of circle 4 to make it rotate counter-clockwise
+    angle4 -= rotationSpeed; // for example, rotate at a rate of 0.03 radians per frame
+  }
+
+}
+
+class Star extends PApplet {
+  float x;
+  float y;
+  float z;
+
+  float pz;
+  float opacity = 255;
+
+  Star() {
+    x = random(-width, width);
+    y = random(-height, height);
+    z = random(width);
+    pz = z;
+  }
+
+  void update(float speed) {
+    z = z - speed;
+    if (z < 1) {
+      z = width;
+      x = random(-width, width);
+      y = random(-height, height);
+      pz = z;
+      opacity = 255;
+    }
+  }
+
+  void show(float speed) {
+    if (g != null) {
+      noStroke();
+
+      beginShape();
+      fill(255, opacity);
+
+      float sx = map(x / z, 0, 1, 0, width) + width / 2;
+      float sy = map(y / z, 0, 1, 0, height) + height / 2;
+
+      float r = map(z, 0, width, 16, 0);
+      ellipse(sx, sy, r, r);
+
+      float px = map(x / pz, 0, 1, 0, width) + width / 2;
+      float py = map(y / pz, 0, 1, 0, height) + height / 2;
+
+      stroke(255, opacity);
+      line(px, py, sx, sy);
+
+      px = x;
+      py = y;
+
+      opacity = map(speed, 20, 0, 255, 0);
+
+      endShape();
+    } else {
+      opacity = 0;
+    }
+  }
+
+}
+>>>>>>> 64e83037ad19f86d2b3f2b1c9ecc65bab1f25abf
