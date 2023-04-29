@@ -1,53 +1,35 @@
-// package C21336753;
+package C21336753;
 
-// import ddf.minim.*;
-// import processing.core.*;
-// import ddf.minim.AudioPlayer;
-// import ddf.minim.analysis.*;
-// import processing.core.PApplet;
+import ie.tudublin.*;
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import processing.core.PApplet;
 
-// public class david extends PApplet {
+public class david extends PApplet{
 
-//     Minim minim;
-//     AudioPlayer audioPlayer;
-//     FFT fft;
-//     float[] spectrum;
+    float angle;
 
-//     float angleX = 0;
-//     float angleY = 0;
-//     float angleZ = 0;
+void setup()
+{
+    size(960, 1080);
+    surface.setLocation(957,0);
+    rectMode(CENTER);
+    stroke (0,0,0);
+    strokeWeight(25);
+}
 
-//     public void setup() {
-//         size(640, 480, P3D);
-
-//         minim = new Minim(this);
-//         audioPlayer = minim.loadFile("song.mp3");
-//         audioPlayer.loop();
-//     }
-
-//     public void draw() {
-//         background(255);
-//         lights();
-//         stroke(0);
-//         noFill();
-
-//         fft.analyze();
-//         spectrum = fft.spectrum();
-
-//         float bass = spectrum[0];
-//         float treble = spectrum[spectrum.length - 1];
-
-//         angleX += map(bass, 0, 255, 0.01, 0.5);
-//         angleY += map(treble, 0, 255, 0.01, 0.5);
-//         angleZ += 0.01;
-
-//         pushMatrix();
-//         translate(width / 2, height / 2, 0);
-//         rotateX(angleX);
-//         rotateY(angleY);
-//         rotateZ(angleZ);
-//         box(100);
-//         popMatrix();
-//     }
-
-// }
+void draw()
+{
+  background(54,69,79);
+  translate(width/2, height/2);
+  for(int i=0; i<100; i++)
+  {
+    fill(i*16, 164-i*50,255-i*10);
+    scale(0.95);
+  
+  rotate(radians(angle));
+  rect(0, 0, 600, 600);
+  }
+  angle+=0.1;
+}
+}
