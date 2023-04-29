@@ -24,7 +24,7 @@ void setup() {
   size(900, 900); // set the size of the window to 500x500 pixels
   
   minim = new Minim(this);
-  audioPlayer = minim.loadFile("DonToliver.mp3");
+  audioPlayer = minim.loadFile("song.mp3");
   audioPlayer.loop();
   
   fft = new FFT(audioPlayer.bufferSize(), audioPlayer.sampleRate());
