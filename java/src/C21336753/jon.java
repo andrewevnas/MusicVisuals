@@ -24,19 +24,6 @@ public class jon extends PApplet {
   float rotationRadius3 = 225; // radius of circle 3
   float rotationRadius4 = 325; // radius of circle 3
 
-    Star[] stars = new Star[800];
-    float speed = 10;
-
-    float centerX, centerY; // center coordinates of the main circle
-    float radius; // radius of the main circle
-    float angle1 = 0; // initial angle of rotation for circle 1 (clockwise)
-    float angle2 = PI; // initial angle of rotation for circle 2 (counter-clockwise)
-    float angle3 = HALF_PI; // initial angle of rotation for circle 3 (counter-clockwise)
-    float angle4 = 0;
-    float rotationRadius1 = 75; // radius of circle 1
-    float rotationRadius2 = 150; // radius of circle 2
-    float rotationRadius3 = 225; // radius of circle 3
-    float rotationRadius4 = 325; // radius of circle 3
 
     void setup() {
       size(900, 900); // set the size of the window to 500x500 pixels
