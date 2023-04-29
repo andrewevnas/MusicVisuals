@@ -6,7 +6,10 @@ import ddf.minim.analysis.*;
 import processing.core.PApplet;
 
 public class andrew extends Visual {
-    
+
+    private FFT fft;
+    private float rotationSpeed;
+
     public void settings() {
         size(800, 800, P3D);
     }
@@ -15,6 +18,8 @@ public class andrew extends Visual {
         startMinim();
         // load the song
         loadAudio("song.mp3");
+        // create an FFT object to analyze the audio
+        fft = new FFT(getAudioPlayer().bufferSize(), getAudioPlayer().sampleRate());
         // start playing the song
         getAudioPlayer().play();
     }
@@ -24,21 +29,25 @@ public class andrew extends Visual {
         stroke(255);
         noFill();
     
-        // calculate the tempo of the song
-        try {
-            calculateFFT();
-        } catch (VisualException e) {
-            e.printStackTrace();
+        // analyze the audio and get the magnitude of the desired frequency range (in this example, 100-200Hz)
+        fft.forward(getAudioPlayer().mix);
+        int lowerBandIndex = fft.freqToIndex(100);
+        int upperBandIndex = fft.freqToIndex(200);
+        float magnitude = 0;
+        for (int i = lowerBandIndex; i <= upperBandIndex; i++) {
+            magnitude += fft.getBand(i);
         }
-        float tempo = getSmoothedAmplitude() * 100;
+    
+        // map the magnitude to a rotation speed (in this example, between 0.01f and 0.1f)
+        rotationSpeed = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 0.01f, 0.1f);
     
         // move the cube to the center of the screen
         pushMatrix();
         translate(width / 2, height / 2, 0);
     
-        // rotate the cube based on the tempo of the song
-        rotateX(frameCount * 0.01f * tempo);
-        rotateY(frameCount * 0.01f * tempo);
+        // rotate the cube based on the mapped rotation speed
+        rotateX(frameCount * rotationSpeed);
+        rotateY(frameCount * rotationSpeed);
     
         // draw the cube
         box(200);
@@ -46,6 +55,4 @@ public class andrew extends Visual {
         popMatrix();
         frameCount++; // increment frame count to rotate the cube
     }
-    
-
 }
