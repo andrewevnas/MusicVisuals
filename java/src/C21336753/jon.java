@@ -38,8 +38,9 @@ public class jon extends PApplet {
     fft = new FFT(audioPlayer.bufferSize(), audioPlayer.sampleRate());
 
     for (int i = 0; i < stars.length; i++) {
-      stars[i] = new Star();
+      stars[i] = new Star(this);
     }
+    
 
     // set the center coordinates and radius of the main circle
     centerX = width / 2;
@@ -132,60 +133,58 @@ public class jon extends PApplet {
 
 }
 
-class Star extends PApplet {
+class Star {
   float x;
   float y;
   float z;
 
   float pz;
   float opacity = 255;
+  PApplet p;
 
-  Star() {
-    x = random(-width, width);
-    y = random(-height, height);
-    z = random(width);
+  Star(PApplet p) {
+    this.p = p;
+    x = p.random(-p.width, p.width);
+    y = p.random(-p.height, p.height);
+    z = p.random(p.width);
     pz = z;
   }
 
   void update(float speed) {
     z = z - speed;
     if (z < 1) {
-      z = width;
-      x = random(-width, width);
-      y = random(-height, height);
+      z = p.width;
+      x = p.random(-p.width, p.width);
+      y = p.random(-p.height, p.height);
       pz = z;
       opacity = 255;
     }
   }
 
   void show(float speed) {
-    if (g != null) {
-      noStroke();
+    p.noStroke();
 
-      beginShape();
-      fill(255, opacity);
+    p.beginShape();
+    p.fill(255, opacity);
 
-      float sx = map(x / z, 0, 1, 0, width) + width / 2;
-      float sy = map(y / z, 0, 1, 0, height) + height / 2;
+    float sx = p.map(x / z, 0, 1, 0, p.width) + p.width / 2;
+    float sy = p.map(y / z, 0, 1, 0, p.height) + p.height / 2;
 
-      float r = map(z, 0, width, 16, 0);
-      ellipse(sx, sy, r, r);
+    float r = p.map(z, 0, p.width, 16, 0);
+    p.ellipse(sx, sy, r, r);
 
-      float px = map(x / pz, 0, 1, 0, width) + width / 2;
-      float py = map(y / pz, 0, 1, 0, height) + height / 2;
+    float px = p.map(x / pz, 0, 1, 0, p.width) + p.width / 2;
+    float py = p.map(y / pz, 0, 1, 0, p.height) + p.height / 2;
 
-      stroke(255, opacity);
-      line(px, py, sx, sy);
+    p.stroke(255, opacity);
+    p.line(px, py, sx, sy);
 
-      px = x;
-      py = y;
+    px = x;
+    py = y;
 
-      opacity = map(speed, 20, 0, 255, 0);
+    opacity = p.map(speed, 20, 0, 255, 0);
 
-      endShape();
-    } else {
-      opacity = 0;
-    }
+    p.endShape();
   }
 
 }
