@@ -8,6 +8,8 @@ import processing.core.PApplet;
 public class andrew extends Visual {
 
     private FFT fft;
+    private float[] boxSizes; // array to store the current size of each box
+    private float[] fillColors; // array to store the current fill color of each box
     private float rotationSpeed;
 
     public void settings() {
@@ -20,6 +22,13 @@ public class andrew extends Visual {
         loadAudio("song.mp3");
         // create an FFT object to analyze the audio
         fft = new FFT(getAudioPlayer().bufferSize(), getAudioPlayer().sampleRate());
+        // initialize the arrays with the initial values
+        boxSizes = new float[5];
+        fillColors = new float[5];
+        for (int i = 0; i < 5; i++) {
+            boxSizes[i] = 50;
+            fillColors[i] = 200;
+        }
         // start playing the song
         getAudioPlayer().play();
     }
@@ -28,37 +37,39 @@ public class andrew extends Visual {
         background(0);
         stroke(255);
         noFill();
-    
-        // analyze the audio and get the magnitude of the desired frequency range (in this example, 100-200Hz)
+
+        // analyze the audio and get the magnitudes of several frequency ranges
         fft.forward(getAudioPlayer().mix);
-        int lowerBandIndex = fft.freqToIndex(60);
-        int upperBandIndex = fft.freqToIndex(100);
-        float magnitude = 0;
-        for (int i = lowerBandIndex; i <= upperBandIndex; i++) {
-            magnitude += fft.getBand(i);
+        float[] magnitudes = new float[5];
+        for (int i = 0; i < magnitudes.length; i++) {
+            int lowerBandIndex = fft.freqToIndex(i * 200);
+            int upperBandIndex = fft.freqToIndex((i + 1) * 200);
+            for (int j = lowerBandIndex; j <= upperBandIndex; j++) {
+                magnitudes[i] += fft.getBand(j);
+            }
         }
-    
-        // map the magnitude to a rotation speed (in this example, between 0.01f and 0.1f)
-        rotationSpeed = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 0.01f, 0.01f);
-    
-        // map the magnitude to a color (in this example, from blue to red)
-        colorMode(HSB);
-        float hue = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 200, 0);
-        fill(hue, 255, 255);
-    
-        // move the cube to the center of the screen
+
+        // move the center of the coordinate system to the center of the screen
         pushMatrix();
         translate(width / 2, height / 2, 0);
-    
-        // rotate the cube based on the mapped rotation speed
-        rotateX(frameCount * rotationSpeed);
-        rotateY(frameCount * rotationSpeed);
-    
-        // draw the cube with the mapped color
-        box(200);
-        
+
+        // draw multiple boxes with different sizes and colors based on the magnitudes
+        colorMode(HSB);
+        for (int i = 0; i < magnitudes.length; i++) {
+            float hue = map(magnitudes[i], 0, fft.getBandWidth() * (i + 1), 200, 0);
+            float size = map(magnitudes[i], 0, fft.getBandWidth() * (i + 1), 50, 400);
+            float lerpHue = lerp(fillColors[i], hue, 0.1f); // interpolate between the current hue and the mapped hue
+            float lerpSize = lerp(boxSizes[i], size, 0.1f); // interpolate between the current size and the mapped size
+            fill(lerpHue, 255, 255);
+            pushMatrix();
+            rotateY(frameCount * 0.01f * (i + 1));
+            box(lerpSize);
+            popMatrix();
+            fillColors[i] = lerpHue; // update the current hue
+            boxSizes[i] = lerpSize; // update the current size
+        }
+
         popMatrix();
-        frameCount++; // increment frame count to rotate the cube
+        frameCount++; // increment frame count to rotate the boxes
     }
-    
 }
