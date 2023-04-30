@@ -25,14 +25,17 @@ public class david extends PApplet{
     {
       background(0,0,0);
       translate(width/2, height/2);
-      for(int i=0; i<100; i++)
+      for(int i=0; i<50000; i++)
       {
-        fill(i*16, 164-i*50,255-i*10);
+        fill(i*690, 351-i*29,86-i*90);
         scale((float) 0.95);
       
-      rotate(radians(angle));
-      rect(0, 0, 600, 600);
+        rotate(radians(angle));
+        float side = 600;
+        float offset = side / 2;
+        ellipse(side, side, side, side);
       }
       angle+=0.1;
     }
 }
+
