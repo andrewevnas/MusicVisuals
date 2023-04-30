@@ -1,10 +1,5 @@
 package C21336753;
 
-import  ie.tudublin.*;
-import ddf.minim.*;
-import ddf.minim.analysis.*;
-import processing.core.PApplet;
-
 import ie.tudublin.Visual;
 
 public class DON extends Visual{

@@ -27,9 +27,9 @@ public class david extends PApplet{
       translate(width/2, height/2);
       for(int i=0; i<50000; i++)
       {
-        float red = (float)map(sin(radians(angle)), -1, 1, 0, 255);
-        float green = (float)map(cos(radians(angle)), -1, 1, 0, 255);
-        float blue = (float)map(cos(radians(angle)), -1, 1, 255, 255);
+        float red = (float)map(sin(radians(angle)), -1, 1, 180, 232);
+        float green = (float)map(cos(radians(angle)), -1, 1, 192, 120);
+        float blue = (float)map(cos(radians(angle)), -1, 1, 203, 255);
         fill(red, green, blue);
         scale((float) 0.95);
         rotate(radians(angle));
