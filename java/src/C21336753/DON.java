@@ -94,29 +94,29 @@ public class DON extends Visual{
 
         switch(mode)
         {
-            /*case 1: //Eoin SECTION 1
-            {
-                David.draw(this);
-                break;
-            }
+            // case 1: //Eoin SECTION 1
+            // {
+            //     David.draw(this);
+            //     break;
+            // }
             
             case 2: //Kieran SECTION 2
             {
-                Jon.render(this);
+                Jon.draw(this);
                 break;
             }
 
-            case 3:
-            {
-                Combined.render(this);
-                break;
-            }*/
+            // case 3:
+            // {
+            //     Combined.render(this);
+            //     break;
+            // }
 
-            case 4: //Aman SECTION 3
-            {
-                Andrew.draw(this);
-                break;
-            }
+            // case 4: //Aman SECTION 3
+            // {
+            //     Andrew.draw(this);
+            //     break;
+            // }
 
            
         }
