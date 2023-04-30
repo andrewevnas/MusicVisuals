@@ -8,7 +8,7 @@ public class Main
 
 
 
-	public void jon()
+	public void DON()
 	{
 		String[] a = {"MAIN"};
        	processing.core.PApplet.runSketch( a, new DON());		
@@ -22,6 +22,6 @@ public class Main
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.jon();			
+		main.DON();			
 	}
 }
