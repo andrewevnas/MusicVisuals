@@ -79,7 +79,7 @@ public class DON extends Visual{
     public void draw()
     {    
         //automate switching when the bass drops
-        if(getAudioPlayer().position() >= 55700 && getAudioPlayer().position() <= 55800)
+        /*if(getAudioPlayer().position() >= 55700 && getAudioPlayer().position() <= 55800)
         {
             mode = 2;
         }
@@ -95,7 +95,7 @@ public class DON extends Visual{
         if(getAudioPlayer().position() >= 154900 && getAudioPlayer().position() <= 155000)
         {
             mode = 5;
-        } 
+        } */
 
         switch(mode)
         {
