@@ -10,11 +10,13 @@ public class andrew extends Visual {
     private FFT fft;
     private float rotationSpeed;
 
-    public void settings() {
+    public void settings() 
+    {
         size(800, 800, P3D);
     }
 
-    public void setup() {
+    public void setup() 
+    {
         startMinim();
         // load the song
         loadAudio("song.mp3");
@@ -24,12 +26,13 @@ public class andrew extends Visual {
         getAudioPlayer().play();
     }
 
-    public void draw() {
+    public void draw() 
+    {
         background(0);
         stroke(255);
         noFill();
     
-        // analyze the audio and get the magnitude of the desired frequency range (in this example, 100-200Hz)
+        // analyze the audio and get the magnitude of the desired frequency range
         fft.forward(getAudioPlayer().mix);
         int lowerBandIndex = fft.freqToIndex(600);
         int upperBandIndex = fft.freqToIndex(6000);
@@ -41,7 +44,7 @@ public class andrew extends Visual {
         // map the magnitude to a rotation speed (in this example, between 0.01f and 0.1f)
         rotationSpeed = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 0.01f, 0.01f);
     
-        // map the magnitude to a color 
+        // map the magnitude to a color
         colorMode(HSB);
         float hue = map(magnitude, 0, upperBandIndex - lowerBandIndex + 1, 200, 0);
         stroke(350, 100, hue);
@@ -61,6 +64,4 @@ public class andrew extends Visual {
         frameCount++; // increment frame count to rotate the cube
     }
 
-    
-    
 }

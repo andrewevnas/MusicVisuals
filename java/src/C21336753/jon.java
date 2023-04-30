@@ -22,7 +22,7 @@ public class jon extends PApplet {
   float rotationRadius1 = 75; // radius of circle 1
   float rotationRadius2 = 150; // radius of circle 2
   float rotationRadius3 = 225; // radius of circle 3
-  float rotationRadius4 = 325; // radius of circle 3
+  float rotationRadius4 = 325; // radius of circle 4
 
   public void settings() {
     size(900, 900);
@@ -133,33 +133,33 @@ public class jon extends PApplet {
 
 }
 
-class Star {
-  float x;
-  float y;
-  float z;
+  class Star {
+      float x;
+      float y;
+      float z;
 
-  float pz;
-  float opacity = 255;
-  PApplet p;
+      float pz;
+      float opacity = 255;
+      PApplet p;
 
-  Star(PApplet p) {
-    this.p = p;
-    x = p.random(-p.width, p.width);
-    y = p.random(-p.height, p.height);
-    z = p.random(p.width);
-    pz = z;
-  }
+      Star(PApplet p) {
+        this.p = p;
+        x = p.random(-p.width, p.width);
+        y = p.random(-p.height, p.height);
+        z = p.random(p.width);
+        pz = z;
+      }
 
-  void update(float speed) {
-    z = z - speed;
-    if (z < 1) {
-      z = p.width;
-      x = p.random(-p.width, p.width);
-      y = p.random(-p.height, p.height);
-      pz = z;
-      opacity = 255;
+      void update(float speed) {
+        z = z - speed;
+        if (z < 1) {
+          z = p.width;
+          x = p.random(-p.width, p.width);
+          y = p.random(-p.height, p.height);
+          pz = z;
+          opacity = 255;
+        }
     }
-  }
 
   void show(float speed) {
     p.noStroke();
