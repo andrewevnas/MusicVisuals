@@ -11,9 +11,9 @@ public class Main
 	public void jon()
 	{
 		String[] a = {"MAIN"};
-       	//processing.core.PApplet.runSketch( a, new DON());		
+       	processing.core.PApplet.runSketch( a, new DON());		
         //processing.core.PApplet.runSketch( a, new jon());	
-		processing.core.PApplet.runSketch( a, new andrew());
+		//processing.core.PApplet.runSketch( a, new andrew());
 		//processing.core.PApplet.runSketch( a, new david());	
 	}
 
