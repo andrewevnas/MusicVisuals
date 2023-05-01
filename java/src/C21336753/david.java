@@ -10,10 +10,7 @@ public class david extends Visual
 
     public void draw(DON e)
     {
-        if (!started)
-            return;
-
-        e.background(0, 0, 0); 
+        e.background(0); 
         e.translate(e.width / 2, e.height / 2);  
       
         for (int i = 0; i < 1000; i++)
