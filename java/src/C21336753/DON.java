@@ -5,7 +5,8 @@ import ie.tudublin.Visual;
 public class DON extends Visual{
     public void settings()
     {
-        size(800, 800, P3D);
+        size(900, 900, P3D);
+
         println("CWD: " + System.getProperty("user.dir"));
     }
 
@@ -56,6 +57,8 @@ public class DON extends Visual{
     {
         colorMode(HSB);
         // noCursor();
+
+
         
         setFrameSize(1024);
         frameRate(60);
@@ -73,32 +76,16 @@ public class DON extends Visual{
 
     public void draw()
     {    
-        //automate switching when the bass drops
-        /*if(getAudioPlayer().position() >= 55700 && getAudioPlayer().position() <= 55800)
-        {
-            mode = 2;
-        }
-        if(getAudioPlayer().position() >= 92700 && getAudioPlayer().position() <= 92800)
-        {
-            mode = 3;
-        }
-        if(getAudioPlayer().position() >= 129900 && getAudioPlayer().position() <= 130000)
-        {
-            mode = 4;
-        }
+        background(255);
 
-        if(getAudioPlayer().position() >= 154900 && getAudioPlayer().position() <= 155000)
-        {
-            mode = 5;
-        } */
 
         switch(mode)
         {
-            // case 1: //Eoin SECTION 1
-            // {
-            //     David.draw(this);
-            //     break;
-            // }
+            case 1: //Eoin SECTION 1
+            {
+                David.draw(this);
+                break;
+            }
             
             case 2: //Kieran SECTION 2
             {
