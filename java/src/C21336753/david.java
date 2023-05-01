@@ -6,9 +6,13 @@ import processing.core.PApplet;
 public class david extends Visual
 {
     float angle = 0;
+    boolean started = false;
 
     public void draw(DON e)
     {
+        if (!started)
+            return;
+
         e.background(0, 0, 0); 
         e.translate(e.width / 2, e.height / 2);  
       
@@ -26,5 +30,11 @@ public class david extends Visual
             e.ellipse(side, 0, side, side);
         }
         angle += 0.17;
+    }
+
+    public void keyPressed()
+    {
+        if (key == ' ')
+            started = true;
     }
 }
