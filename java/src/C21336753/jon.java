@@ -18,7 +18,8 @@ public class jon extends Visual {
   float centerX; // X coordinate of center of screen
   float centerY; // Y coordinate of center of screen
 
-  public void draw(DON e) {
+  public void draw(DON e) 
+  {
 
 
     
