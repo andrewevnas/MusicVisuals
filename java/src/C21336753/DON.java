@@ -119,7 +119,7 @@ public class DON extends Visual{
 
             case 4: //Aman SECTION 3
             {
-                Andrew.draw(this);
+                Andrew.render(this);
                 break;
             }
 
