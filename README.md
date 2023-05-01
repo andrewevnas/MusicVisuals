@@ -1,8 +1,22 @@
 # Music Visualiser Project
 
+<<<<<<< HEAD
+Name: Jon Kehoe
+
+Student Number: C21372766
+
 Name: David Udoh
 
-Student Number: 
+Student Number: C21455002
+
+Name: Andrew Evans
+
+Student Number: C21336753
+
+=======
+Name: David Udoh
+>>>>>>> c2e71f737b083988be2d4762431791cf78732df7
+
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -12,12 +26,23 @@ Student Number:
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+<<<<<<< HEAD
+For this Assignment, our group utilized Java Processing to create four distinct visualizations, with each section being developed by a different member. These visualizations are programmed to react to the amplitude and frequency of music by altering colors, shape sizes, and other parameters. To extract audio data from an MP3 file, we leveraged the capabilities of the Audio Minim library.
+
+# Instructions
+- Run the main.java file in the ie\tudublin package.
+- Space bar is to pause/unpause audio.
+- You can switch through the visualisations using the 1, 2, 3 and 4 keys.
+- Pressing "r" will restart the song from the start.
+
+=======
 For this assignemnt we were given a task to create a music visual for a song of our choice. The visuals we created were to reflect the mood, rythm and tempo of the song. 
 
 # Instructions
 press f5 to see music visuals
 press space to start visuals
 press 1 - 4 to switch between different visuals
+>>>>>>> c2e71f737b083988be2d4762431791cf78732df7
 # How it works
 
 # What I am most proud of in the assignment

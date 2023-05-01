@@ -40,7 +40,7 @@ public class andrew extends Visual {
 
 
     public void drawBorder(float smoothedAmplitude, float colour, DON e) {
-        e.background(0);
+        //e.background(0);
         float border = DON.map(smoothedAmplitude, 0, 0.15f, 3, 70);
         int color = e.color(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
         e.stroke(color);
@@ -93,8 +93,8 @@ public class andrew extends Visual {
 
     public void render(DON e)
     {
-        //e.colorMode(Visual.HSB);
-        //e.background(0);
+        e.colorMode(Visual.HSB);
+        e.background(0);
         smoothedAmplitude = e.getSmoothedAmplitude() / 8;
 
         drawBorder(smoothedAmplitude, ADD, e);
@@ -106,12 +106,7 @@ public class andrew extends Visual {
         drawPyramid(cornerSize, 0, e, cornerSize, cornerSize);
         drawPyramid(cornerSize, 0, e, e.width - cornerSize, cornerSize);
         drawPyramid(cornerSize, 0, e, cornerSize, e.height - cornerSize);
-        drawPyramid(cornerSize, 0, e, e.width - cornerSize, e.height - cornerSize);
-
-        
-       
+        drawPyramid(cornerSize, 0, e, e.width - cornerSize, e.height - cornerSize);  
     }
-
-
 
 }
