@@ -9,10 +9,14 @@ public class david extends Visual
 
     public void draw(DON e)
     {
-        e.background(0, 0, 0); 
+        e.background(0); 
         e.translate(e.width / 2, e.height / 2);  
       
+<<<<<<< HEAD
         for (int i = 0; i < 100; i++)
+=======
+        for (int i = 0; i < 1000; i++)
+>>>>>>> c2e71f737b083988be2d4762431791cf78732df7
         {
             float red = (float) e.map(e.sin(e.radians(angle)), -1, 1, 180, 232);
             float green = (float) e.map(e.cos(e.radians(angle)), -1, 1, 192, 120);
