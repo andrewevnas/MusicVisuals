@@ -1,6 +1,6 @@
 # Music Visualiser Project
 
-Name:
+Name: David Udoh
 
 Student Number: 
 
@@ -12,12 +12,16 @@ Student Number:
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+For this assignemnt we were given a task to create a music visual for a song of our choice. The visuals we created were to reflect the mood, rythm and tempo of the song. 
 
 # Instructions
-
+press f5 to see music visuals
+press space to start visuals
+press 1 - 4 to switch between different visuals
 # How it works
 
 # What I am most proud of in the assignment
+In this assignment i am most proud of the circular swirl pattern i created on top of that 
 
 # Markdown Tutorial
 
