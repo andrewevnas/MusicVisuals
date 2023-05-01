@@ -6,13 +6,18 @@ import processing.core.PApplet;
 public class david extends Visual
 {
     float angle = 0;
+    boolean started = false;
 
     public void draw(DON c)
     {
         c.background(0); 
         c.translate(c.width / 2, c.height / 2);  
       
+<<<<<<< HEAD
         for (int i = 0; i < 100; i++)
+=======
+        for (int i = 0; i < 1000; i++)
+>>>>>>> c2e71f737b083988be2d4762431791cf78732df7
         {
             float red = (float) c.map(c.sin(c.radians(angle)), -1, 1, 180, 232);
             float green = (float) c.map(c.cos(c.radians(angle)), -1, 1, 192, 120);
@@ -26,10 +31,5 @@ public class david extends Visual
             c.ellipse(side, 0, side, side);
         }
         angle += 0.17;
-    }
-
-    public void render(DON c)
-    {
-            
     }
 }
