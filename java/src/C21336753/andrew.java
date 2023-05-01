@@ -20,7 +20,7 @@ public class andrew extends Visual {
         e.calculateAverageAmplitude();
         e.stroke(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
         e.strokeWeight(5);
-        e.fill(255);; // set no fill color
+        e.fill(155);; // set no fill color
         
 
         e.pushMatrix();
@@ -35,7 +35,7 @@ public class andrew extends Visual {
 
         e.popMatrix();
 
-        angleCube += speed * 0.5f;
+        angleCube += speed * 0.7f;
     }
 
 
