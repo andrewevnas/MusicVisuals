@@ -5,7 +5,7 @@ import ie.tudublin.Visual;
 public class DON extends Visual{
     public void settings()
     {
-        size(800, 800);
+        size(800, 800, P3D);
         println("CWD: " + System.getProperty("user.dir"));
     }
 
@@ -14,7 +14,7 @@ public class DON extends Visual{
 
     public void keyPressed()
     {
-        if (key >= '0' && key <= '5')
+        if (key >= '0' && key <= '4')
         {
 		    mode = key - '0';
 	    }
@@ -94,29 +94,29 @@ public class DON extends Visual{
 
         switch(mode)
         {
-            case 1: //Eoin SECTION 1
+            case 1: 
             {
                  David.draw(this);
                  break;
              }
             
-            case 2: //Kieran SECTION 2
+            case 2: 
             {
                 Jon.draw(this);
                 break;
             }
 
-            // case 3:
-            // {
-            //     Combined.render(this);
-            //     break;
-            // }
-
-            case 4: //Aman SECTION 3
+            case 3: 
             {
                 Andrew.render(this);
                 break;
             }
+
+            /*case 4:
+            {
+                 Combined.render(this);
+                 break;
+            }*/
 
            
         }

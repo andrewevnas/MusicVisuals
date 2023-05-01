@@ -12,7 +12,7 @@ public class andrew extends Visual {
     float smoothedAmplitude = 0;
     
 
-    public void drawCube( DON e) 
+    public void drawCube(DON e) 
     {
         e.calculateAverageAmplitude();
         e.stroke(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
