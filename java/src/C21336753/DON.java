@@ -15,7 +15,7 @@ public class DON extends Visual{
 
     public void keyPressed()
     {
-        if (key >= '0' && key <= '5')
+        if (key >= '0' && key <= '4')
         {
 		    mode = key - '0';
 	    }
@@ -87,23 +87,23 @@ public class DON extends Visual{
                 break;
             }
             
-            case 2: //Kieran SECTION 2
+            case 2: 
             {
                 Jon.draw(this);
                 break;
             }
 
-            // case 3:
-            // {
-            //     Combined.render(this);
-            //     break;
-            // }
+            case 3: 
+            {
+                Andrew.render(this);
+                break;
+            }
 
-            // case 4: //Aman SECTION 3
-            // {
-            //     Andrew.draw(this);
-            //     break;
-            // }
+            /*case 4:
+            {
+                 Combined.render(this);
+                 break;
+            }*/
 
            
         }
