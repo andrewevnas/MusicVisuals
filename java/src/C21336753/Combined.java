@@ -14,7 +14,8 @@ public class Combined extends Visual {
     float PYspeed = 1f;
     float smoothedAmplitude = 0;
     float angle;
-
+    
+    
     public void drawPyramid(float t, float colour, DON e, float posX, float posY) 
     {
         e.calculateAverageAmplitude();
@@ -117,6 +118,8 @@ public class Combined extends Visual {
         e.rect(0, 0, border, e.height); // Left
     }
 
+    
+
 
     public void render(DON e)
     {
@@ -137,7 +140,8 @@ public class Combined extends Visual {
         drawSmallSpiral(e);
         
         drawSpiral(e);
-
         
     }
+
+    
 }

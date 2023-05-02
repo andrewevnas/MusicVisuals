@@ -1,22 +1,24 @@
-# Music Visualiser Project
+### Music Visualiser Project
 
-<<<<<<< HEAD
-Name: Jon Kehoe
 
-Student Number: C21372766
+## Members of the Group
 
-Name: David Udoh
+| Name | Student Number |
+|-----------|-----------|
+| Jon Kehoe | C21372766 |
+| Andrew Evans | C21336753 |
+| David Udoh | C21455002 |
 
-Student Number: C21455002
 
-Name: Andrew Evans
 
-Student Number: C21336753
 
-=======
-Name: David Udoh
->>>>>>> c2e71f737b083988be2d4762431791cf78732df7
+## Video Of Our Visualisation
 
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+
+
+## Description of the assignment
+For this assignemnt we were given a task to create a music visual for a song of our choice. The visuals we created were to reflect the mood, rythm and tempo of the song. 
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -24,95 +26,81 @@ Name: David Udoh
 - You should start by creating a subclass of ie.tudublin.Visual
 - There is an example visualiser called MyVisual in the example package
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
+- press f5 to see music visuals
+- press space to start visuals
+- press 1 - 5 to switch between different visuals
 
-# Description of the assignment
-<<<<<<< HEAD
-For this Assignment, our group utilized Java Processing to create four distinct visualizations, with each section being developed by a different member. These visualizations are programmed to react to the amplitude and frequency of music by altering colors, shape sizes, and other parameters. To extract audio data from an MP3 file, we leveraged the capabilities of the Audio Minim library.
 
-# Instructions
-- Run the main.java file in the ie\tudublin package.
-- Space bar is to pause/unpause audio.
-- You can switch through the visualisations using the 1, 2, 3 and 4 keys.
-- Pressing "r" will restart the song from the start.
+## How it works 
 
-=======
-For this assignemnt we were given a task to create a music visual for a song of our choice. The visuals we created were to reflect the mood, rythm and tempo of the song. 
-
-# Instructions
-press f5 to see music visuals
-press space to start visuals
-press 1 - 4 to switch between different visuals
->>>>>>> c2e71f737b083988be2d4762431791cf78732df7
-# How it works
-
-# What I am most proud of in the assignment
-In this assignment i am most proud of the circular swirl pattern i created on top of that 
-
-# Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
+INSERT TEXT
 
 ```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
+andrew Andrew = new andrew();
+jon Jon = new jon();
+david David = new david();
+Combined Combined = new Combined();
 ```
 
-So is this without specifying the language:
+INSERT TEXT
 
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
+```Java
+ switch(mode)
+        {
+            case 1: //david call 
+            {
+                David.render(this);
+                break;
+            }
+            
+            case 2: // jon call
+            {
+                Jon.render(this);
+                break;
+            }
+
+            case 3: // andrew call
+            {
+                Andrew.render(this);
+                break;
+            }
+
+            
+            case 4: // combined call
+            {
+                 Combined.render(this);
+                 break;
+            }
+
+           
+        }
+
+        
 ```
 
-This is an image using a relative URL:
+
+# Section 1 David
+In my visualiser, I created a multi colour spiral with two cubes, one larger and one smaller cube that jump to the amplitude of the song. Also surrounding the screen I’ve implemented a border that expands and retracts also to the amplitude of the song. My aim with the two rotating cubes was to create something similar to an optical illusion to really encapsulate the beat of the song as in my opinion the beat of the song is very relaxing and soothing.
 
 ![An image](images/p8.png)
 
-This is an image using an absolute URL:
+# Section 2 Jon
+In my visuliser i have made a visual using circles and stars, the circles are supposed to represent the planets in the solar system which are rotating clockwise and anti-clockwise. There is four rotating planets which are represented by differnt colours and they show up as a trandsparent planets, this allows the stars to be seen behind them. The circles rotate to the speed of the amplitude of the song and get larger to the amplitude of the song also. The stars appear faster ot the amplitude of the song giving it an effect that its traveling through space like a space warp affect.
 
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
+![An image](images/p8.png)
 
-This is a youtube video:
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+# Section 3 Andrew
+In my visual I decided to incoporate a minimalist approach due to the laid back nature of the song. My main "character" is a 3D cube which reacts to the amplitude of the track and expands when amplitude increases. As design features I added four pyramids that rotate at a very quick, distorted pace, again, due to the amplitude of the song. Lastly I incoporated a spiral pattern in the background and also a coloured border that extends slightly to amplitude.
 
-This is a table:
+![An image](images/p8.png)
 
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
+# Section 4 Combined
+In this visual we decided to take our favourite parts of each of our individual visuals and combined it to go the extra mile. This is an example of us working together as a team as well as creating our own personal visuals.
 
+![An image](images/p8.png)
+
+
+# What we am most proud of in the assignment
+
+The visualizations are classified into separate classes, all of which are contained within a single package. The "DON.java" file functions as the driver for the project, and four visual objects were instantiated. Inheritance was utilized to enable the usage of methods such as "calculateAverageAmplitude()" from the "Visual" class. The "setup" method was used to load in the "song.mp3" file using "minim".

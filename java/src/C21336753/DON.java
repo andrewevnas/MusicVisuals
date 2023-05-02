@@ -76,31 +76,51 @@ public class DON extends Visual{
 
     public void draw()
     {    
-        background(255);
+        //background(255);
+
+        //automate switching when the bass drops
+        if(getAudioPlayer().position() >= 10000 && getAudioPlayer().position() <= 55800)
+        {
+            mode = 2;
+        }
+        if(getAudioPlayer().position() >= 20000 && getAudioPlayer().position() <= 92800)
+        {
+            mode = 3;
+        }
+        if(getAudioPlayer().position() >= 30000 && getAudioPlayer().position() <= 130000)
+        {
+            mode = 4;
+        }
+
+        if(getAudioPlayer().position() >= 40000 && getAudioPlayer().position() <= 155000)
+        {
+            mode = 5;
+        } 
+
 
 
         switch(mode)
         {
-            case 1: //Eoin SECTION 1
+            case 1: //david call 
             {
                 David.render(this);
                 break;
             }
             
-            case 2: 
+            case 2: // jon call
             {
                 Jon.render(this);
                 break;
             }
 
-            case 3: 
+            case 3: // andrew call
             {
                 Andrew.render(this);
                 break;
             }
 
             
-            case 4:
+            case 4: // combined call
             {
                  Combined.render(this);
                  break;

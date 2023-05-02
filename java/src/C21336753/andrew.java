@@ -1,9 +1,7 @@
 package C21336753;
 
 import  ie.tudublin.Visual;
-import ddf.minim.*;
-import ddf.minim.analysis.*;
-import processing.core.PApplet;
+
 import processing.core.PConstants;
 
 public class andrew extends Visual {
