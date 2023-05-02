@@ -5,7 +5,7 @@ import ie.tudublin.Visual;
 public class DON extends Visual{
     public void settings()
     {
-        size(900, 900, P3D);
+        size(1000, 1000, P3D);
 
         println("CWD: " + System.getProperty("user.dir"));
     }
@@ -83,7 +83,7 @@ public class DON extends Visual{
         {
             case 1: //Eoin SECTION 1
             {
-                David.draw(this);
+                David.render(this);
                 break;
             }
             
@@ -99,11 +99,12 @@ public class DON extends Visual{
                 break;
             }
 
-            /*case 4:
+            
+            case 4:
             {
                  Combined.render(this);
                  break;
-            }*/
+            }
 
            
         }

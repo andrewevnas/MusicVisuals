@@ -13,6 +13,7 @@ public class andrew extends Visual {
     float speed = 0.02f;
     float PYspeed = 1f;
     float smoothedAmplitude = 0;
+    float angle;
     
 
     public void drawCube(DON e) 
@@ -86,6 +87,32 @@ public class andrew extends Visual {
 
         anglePY += PYspeed * (smoothedAmplitude * 2);
     }
+
+    public void drawBigSpiral(DON e)
+    {
+       // c.background(0); 
+        e.translate(e.width / 2, e.height / 2);  
+        e.stroke(240);
+        e.strokeWeight(3);
+      
+        for (int i = 0; i < 1000; i++)
+        {
+            float red = (float) e.map(e.sin(e.radians(angle)), -1, 1, 180, 232);
+            float green = (float) e.map(e.cos(e.radians(angle)), -1, 1, 192, 120);
+            float blue = (float) e.map(e.cos(e.radians(angle)), -1, 1, 203, 255);
+            
+            //c.fill(red, green, blue);
+            
+            e.noFill();
+            e.scale((float) 0.95);
+            e.rotate(e.radians(angle));
+            float side = 800;
+            float offset = side / 2;
+            e.ellipse(side, 0, side, side);
+        }
+        angle += 0.17;
+        
+    }
     
     
 
@@ -105,6 +132,8 @@ public class andrew extends Visual {
         drawPyramid(cornerSize, 0, e, e.width - cornerSize, cornerSize);
         drawPyramid(cornerSize, 0, e, cornerSize, e.height - cornerSize);
         drawPyramid(cornerSize, 0, e, e.width - cornerSize, e.height - cornerSize);  
+        
+        drawBigSpiral(e);
     }
 
 }
