@@ -20,7 +20,7 @@ public class andrew extends Visual {
         e.calculateAverageAmplitude();
         e.stroke(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
         e.strokeWeight(5);
-        e.fill(255);; // set no fill color
+        e.fill(155);; // set no fill color
         
 
         e.pushMatrix();
@@ -35,12 +35,12 @@ public class andrew extends Visual {
 
         e.popMatrix();
 
-        angleCube += speed * 0.5f;
+        angleCube += speed * 0.7f;
     }
 
 
     public void drawBorder(float smoothedAmplitude, float colour, DON e) {
-        e.background(0);
+        //e.background(0);
         float border = DON.map(smoothedAmplitude, 0, 0.15f, 3, 70);
         int color = e.color(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
         e.stroke(color);
@@ -54,8 +54,6 @@ public class andrew extends Visual {
 
     public void drawPyramid(float t, float colour, DON e, float posX, float posY) 
     {
-        
-        
         e.pushMatrix();
         e.stroke(255, 255, 0);
         e.fill(255);
@@ -93,8 +91,8 @@ public class andrew extends Visual {
 
     public void render(DON e)
     {
-        //e.colorMode(Visual.HSB);
-        //e.background(0);
+        e.colorMode(Visual.HSB);
+        e.background(0);
         smoothedAmplitude = e.getSmoothedAmplitude() / 8;
 
         drawBorder(smoothedAmplitude, ADD, e);
@@ -106,12 +104,7 @@ public class andrew extends Visual {
         drawPyramid(cornerSize, 0, e, cornerSize, cornerSize);
         drawPyramid(cornerSize, 0, e, e.width - cornerSize, cornerSize);
         drawPyramid(cornerSize, 0, e, cornerSize, e.height - cornerSize);
-        drawPyramid(cornerSize, 0, e, e.width - cornerSize, e.height - cornerSize);
-
-        
-       
+        drawPyramid(cornerSize, 0, e, e.width - cornerSize, e.height - cornerSize);  
     }
-
-
 
 }

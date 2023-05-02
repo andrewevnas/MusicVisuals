@@ -18,6 +18,8 @@ public class jon extends Visual {
   float rotationRadius4 = 335;
   float centerX;
   float centerY;
+  
+  
 
   public void draw(DON d) {
     d.background(0); // set the background color to black
@@ -34,10 +36,11 @@ public class jon extends Visual {
 
       // generate a random speed for the star
       float speed = d.random(0.1f, 0.5f); // change this line
+      speed += d.getSmoothedAmplitude();
 
-      // update the star's position based on its speed
+      /*update the star's position based on its speed
       x += speed;
-      y += speed;
+      y += speed;*/
 
       // calculate the color of the star based on the distance from the center of the
       // screen
@@ -147,5 +150,13 @@ public class jon extends Visual {
     angle4 -= 0.03 * d.getSmoothedAmplitude();
 
     d.popMatrix();
+  }
+  
+  public void render(DON d) 
+  {
+    d.colorMode(Visual.HSB);
+    d.background(0);
+    
+    draw(d);
   }
 }

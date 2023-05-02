@@ -89,7 +89,7 @@ public class DON extends Visual{
             
             case 2: 
             {
-                Jon.draw(this);
+                Jon.render(this);
                 break;
             }
 
