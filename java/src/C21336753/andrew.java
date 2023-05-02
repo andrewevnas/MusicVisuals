@@ -54,8 +54,6 @@ public class andrew extends Visual {
 
     public void drawPyramid(float t, float colour, DON e, float posX, float posY) 
     {
-        
-        
         e.pushMatrix();
         e.stroke(255, 255, 0);
         e.fill(255);
