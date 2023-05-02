@@ -33,7 +33,7 @@ For this assignemnt we were given a task to create a music visual for a song of 
 
 ## How it works 
 
-INSERT TEXT
+Throughtout this project used the file structure of "Individuel Visuslisers" being then passed to a "Parent" class called DON.java. Each of these visuals send their own information to DON using a variation of "render" method. DON is run from main.java. In each visualiser we extend Visual.java which include "preset" methods based on PApplet. Within DON.java we declare each each personal class or visual as a new name with a Capital letter to distinguish ie. Jon and jon. Each of these is this run using a switch case mode dependent of key strokes between 1-4.
 
 ```Java
 andrew Andrew = new andrew();
@@ -42,7 +42,7 @@ david David = new david();
 Combined Combined = new Combined();
 ```
 
-INSERT TEXT
+
 
 ```Java
  switch(mode)
