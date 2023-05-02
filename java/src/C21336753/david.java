@@ -11,7 +11,15 @@ public class david extends Visual
     public void draw(DON e)
     {
         e.background(0); 
-        e.translate(e.width / 2, e.height / 2);  
+        e.translate(e.width / 2, e.height / 2);
+
+        float amplitude = e.getAmplitude();
+        float rectSize = PApplet.map(amplitude, 0, 1, 600, 1200);
+        float rectOffset = rectSize / 2;
+
+        e.stroke(255);
+        e.noFill();
+        e.rect(-rectOffset, -rectOffset, rectSize, rectSize);
       
         for (int i = 0; i < 1000; i++)
         {
