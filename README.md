@@ -93,12 +93,12 @@ In my visuliser i have made a visual using circles and stars, the circles are su
 # Section 3 Andrew
 In my visual I decided to incoporate a minimalist approach due to the laid back nature of the song. My main "character" is a 3D cube which reacts to the amplitude of the track and expands when amplitude increases. As design features I added four pyramids that rotate at a very quick, distorted pace, again, due to the amplitude of the song. Lastly I incoporated a spiral pattern in the background and also a coloured border that extends slightly to amplitude.
 
-![An image](andrew/p8.png)
+![An image](images/andrew.png)
 
 # Section 4 Combined
 In this visual we decided to take our favourite parts of each of our individual visuals and combined it to go the extra mile. This is an example of us working together as a team as well as creating our own personal visuals.
 
-![An image](combined/p8.png)
+![An image](images/combined.png)
 
 
 # What we am most proud of in the assignment
