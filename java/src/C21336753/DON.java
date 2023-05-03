@@ -5,7 +5,7 @@ import ie.tudublin.Visual;
 public class DON extends Visual{
     public void settings()
     {
-        size(1000, 1000, P3D);
+        size(500, 500, P3D);
 
         println("CWD: " + System.getProperty("user.dir"));
     }

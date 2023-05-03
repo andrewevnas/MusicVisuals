@@ -14,7 +14,7 @@
 
 ## Video Of Our Visualisation
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://youtu.be/EhICKfzf_YA)
 
 
 ## Description of the assignment
@@ -85,7 +85,7 @@ In my visualiser, I created a multi colour spiral with two cubes, one larger and
 ![An image](images/david.png)
 
 # Section 2 Jon
-In my visuliser i have made a visual using circles and stars, the circles are supposed to represent the planets in the solar system which are rotating clockwise and anti-clockwise. There is four rotating planets which are represented by differnt colours and they show up as a trandsparent planets, this allows the stars to be seen behind them. The circles rotate to the speed of the amplitude of the song and get larger to the amplitude of the song also. The stars appear faster ot the amplitude of the song giving it an effect that its traveling through space like a space warp affect.
+In my visuliser i have made a visual using circles and stars, the circles are supposed to represent the planets in the solar system which are rotating clockwise and anti-clockwise. There is four rotating planets which are represented by differnt colours and they show up as a trandsparent planets, this allows the stars to be seen behind them. The circles rotate to the speed of the amplitude of the song and get larger to the amplitude of the song also. The stars appear faster ot the amplitude of the song giving it an effect tha t its traveling through space like a space warp affect.
 
 ![An image](images/jon.png)
 
