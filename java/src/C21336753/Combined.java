@@ -120,7 +120,7 @@ public class Combined extends Visual {
 
     public void drawCube(DON e, float posX, float posY)
     {
-        e.stroke(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
+        e.stroke(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255); 
         e.strokeWeight(5);
         e.noFill();; // set no fill color
         
@@ -137,7 +137,7 @@ public class Combined extends Visual {
 
         e.popMatrix();
 
-        anglePY += PYspeed * (smoothedAmplitude * 2);
+        anglePY += PYspeed * (smoothedAmplitude * 1.5);
     }
 
     public void drawStars(DON e)

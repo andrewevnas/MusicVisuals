@@ -64,9 +64,9 @@ public class DON extends Visual{
         frameRate(60);
 
         startMinim();
-        loadAudio("song.mp3");
+        loadAudio("untitled.mp3");
 
-        getAudioPlayer().setGain(-10);
+        getAudioPlayer().setGain(-5);
     }
 
     andrew Andrew = new andrew();
@@ -77,25 +77,7 @@ public class DON extends Visual{
     public void draw()
     {    
         //background(255);
-/* 
-        //automate switching when the bass drops
-        if(getAudioPlayer().position() >= 10000 && getAudioPlayer().position() <= 55800)
-        {
-            mode = 2;
-        }
-        if(getAudioPlayer().position() >= 20000 && getAudioPlayer().position() <= 92800)
-        {
-            mode = 3;
-        }
-        if(getAudioPlayer().position() >= 30000 && getAudioPlayer().position() <= 130000)
-        {
-            mode = 4;
-        }
 
-        if(getAudioPlayer().position() >= 40000 && getAudioPlayer().position() <= 155000)
-        {
-            mode = 5;
-        } */
 
 
 
@@ -103,13 +85,13 @@ public class DON extends Visual{
         {
             case 1: //david call 
             {
-                David.render(this);
+                Jon.render(this);
                 break;
             }
             
             case 2: // jon call
             {
-                Jon.render(this);
+                David.render(this);
                 break;
             }
 
