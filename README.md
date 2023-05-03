@@ -82,23 +82,23 @@ Combined Combined = new Combined();
 # Section 1 David
 In my visualiser, I created a multi colour spiral with two cubes, one larger and one smaller cube that jump to the amplitude of the song. Also surrounding the screen I’ve implemented a border that expands and retracts also to the amplitude of the song. My aim with the two rotating cubes was to create something similar to an optical illusion to really encapsulate the beat of the song as in my opinion the beat of the song is very relaxing and soothing.
 
-![An image](images/p8.png)
+![An image](images/david.png)
 
 # Section 2 Jon
 In my visuliser i have made a visual using circles and stars, the circles are supposed to represent the planets in the solar system which are rotating clockwise and anti-clockwise. There is four rotating planets which are represented by differnt colours and they show up as a trandsparent planets, this allows the stars to be seen behind them. The circles rotate to the speed of the amplitude of the song and get larger to the amplitude of the song also. The stars appear faster ot the amplitude of the song giving it an effect that its traveling through space like a space warp affect.
 
-![An image](images/p8.png)
+![An image](images/jon.png)
 
 
 # Section 3 Andrew
 In my visual I decided to incoporate a minimalist approach due to the laid back nature of the song. My main "character" is a 3D cube which reacts to the amplitude of the track and expands when amplitude increases. As design features I added four pyramids that rotate at a very quick, distorted pace, again, due to the amplitude of the song. Lastly I incoporated a spiral pattern in the background and also a coloured border that extends slightly to amplitude.
 
-![An image](images/p8.png)
+![An image](andrew/p8.png)
 
 # Section 4 Combined
 In this visual we decided to take our favourite parts of each of our individual visuals and combined it to go the extra mile. This is an example of us working together as a team as well as creating our own personal visuals.
 
-![An image](images/p8.png)
+![An image](combined/p8.png)
 
 
 # What we am most proud of in the assignment

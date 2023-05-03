@@ -94,7 +94,7 @@ public class Combined extends Visual {
             
             //c.fill(red, green, blue);
             
-            e.noFill();
+            e.fill(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
             e.scale((float) 0.95);
             e.rotate(e.radians(angle));
             float side = 140;
@@ -118,6 +118,48 @@ public class Combined extends Visual {
         e.rect(0, 0, border, e.height); // Left
     }
 
+    public void drawCube(DON e, float posX, float posY)
+    {
+        e.stroke(DON.map(e.getSmoothedAmplitude(), 0, 0.6f, 0, 255), 255, 255);
+        e.strokeWeight(5);
+        e.noFill();; // set no fill color
+        
+
+        e.pushMatrix();
+
+        e.camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
+        e.translate(posX, posY, -200);
+        e.rotateX(anglePY);
+        e.rotateZ(anglePY);       
+
+        float boxSize = 20; 
+        e.box(boxSize);
+
+        e.popMatrix();
+
+        anglePY += PYspeed * (smoothedAmplitude * 2);
+    }
+
+    public void drawStars(DON e)
+    {
+        // Set the color of the stars to white
+        e.stroke(255);
+        e.noFill();
+        
+
+        // Draw 1000 stars
+        for (int i = 0; i < 1000; i++)
+        {
+            // Set a random position for each star
+            float x = e.random(e.width);
+            float y = e.random(e.height);
+            
+            // Draw the star as a small ellipse
+            e.ellipse(x, y, 1, 1);
+        }
+    }
+
+
     
 
 
@@ -127,7 +169,7 @@ public class Combined extends Visual {
         e.background(0);
         smoothedAmplitude = e.getSmoothedAmplitude() / 8;
 
-         
+        drawStars(e);
 
         float cornerSize = 50 + (smoothedAmplitude * 200);
         drawPyramid(cornerSize, 0, e, cornerSize, cornerSize);
@@ -138,8 +180,15 @@ public class Combined extends Visual {
         drawBorder(smoothedAmplitude, ADD, e);
 
         drawSmallSpiral(e);
-        
         drawSpiral(e);
+        
+        drawCube(e, -56, 55);
+        drawCube(e, 56, 55);
+        drawCube(e, -56, -55);
+        drawCube(e, 56, -55);
+
+        
+        
         
     }
 
